@@ -1,3 +1,10 @@
 <h1><%= @car.model %></h1>
 <h2><%= @car.color %></h2>
 <h4><%= @car.year %></h4>
+
+<%= simple_form_for([@car, @booking]) do |f| %>
+  <%= f.input :start_date %>
+  <%= f.input :end_date %>
+  <%= f.submit %>
+<% end %>
+<%= link_to 'Back to the list', cars_path %>
