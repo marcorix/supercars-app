@@ -1,0 +1,11 @@
+<h1>Cars List</h1>
+
+<% @cars.each do |car| %>
+
+  <%= car.model %> |
+  <%= car.color %> |
+  <%= car.year %>
+  <%= link_to 'View details', car_path(car) %>
+  <hr>
+
+<% end %>
