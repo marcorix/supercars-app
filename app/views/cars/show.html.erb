@@ -1,6 +1,7 @@
 <h1>Model:<%= @car.model %></h1>
 <h2>Color: <%= @car.color %></h2>
 <h4>Year: <%= @car.year %></h4>
+<h4>Year: <%= @car.price %></h4>
 <h4>Owner: <%= @car.user.email %></h4>
 
 <%= simple_form_for([@car, @booking]) do |f| %>

@@ -3,8 +3,8 @@
 <% @cars.each do |car| %>
 
   <%= car.model %> |
-  <%= car.color %> |
   <%= car.year %>
+   <h4>£ <%= car.price %> p/day</h4> |
   <%= link_to 'View details', car_path(car) %>
   <hr>
 
