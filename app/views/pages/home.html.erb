@@ -1,3 +1,79 @@
-<h1>Dream Cars App</h1>
-<p>Rent your dream car for any occasion!</p>
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <h1><em> VINTAGE CARS </em></h1>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <% if user_signed_in? %>
+        <li class="nav-item active">
+          <%= link_to "Home", "#", class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to "Messages", "#", class: "nav-link" %>
+        </li>
+        <li class="nav-item dropdown">
+          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+            <%= link_to "Action", "#", class: "dropdown-item" %>
+            <%= link_to "Another action", "#", class: "dropdown-item" %>
+            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+          </div>
+        </li>
+      <% else %>
+        <li class="nav-item">
+          <%= link_to "List Car", "#", class: "nav-link" %>
+          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+        </li>
+      <% end %>
+    </ul>
+  </div>
+</div>
+<div class="banner">
+  <div class="container">
+    <h1>Vintage Cars brings <strong>beautiful classics</strong> to <strong>nostalgic people</strong>!</h1>
+    <p>A once in a lifetime experience in your hands</p>
+    <a class="btn btn-gradient" href="#">View available cars</a>
+  </div>
+</div>
+
+POPULAR CARS
+<div class="card-trip">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <div class="card-trip-infos">
+    <div>
+      <h2>Audi 100 Coupe-S</h2>
+      <p>Beautiful, elegant and stylish car</p>
+    </div>
+    <h2 class="card-trip-pricing">£300/hr</h2>
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+  </div>
+</div>
+
+<div class="card-trip">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <div class="card-trip-infos">
+    <div>
+      <h2>Audi 100 Coupe-S</h2>
+      <p>Beautiful, elegant and stylish car</p>
+    </div>
+    <h2 class="card-trip-pricing">£300/hr</h2>
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+  </div>
+</div>
+
+<div class="card-trip">
+  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
+  <div class="card-trip-infos">
+    <div>
+      <h2>Audi 100 Coupe-S</h2>
+      <p>Beautiful, elegant and stylish car</p>
+    </div>
+    <h2 class="card-trip-pricing">£300/hr</h2>
+    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
+  </div>
+</div>
 <%= link_to 'View Cars', cars_path %>
