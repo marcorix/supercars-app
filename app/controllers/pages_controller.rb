@@ -3,4 +3,7 @@ class PagesController < ApplicationController
 
   def home
   end
+  def dashboard
+    @booking = Booking.where(user: current_user)
+  end
 end
