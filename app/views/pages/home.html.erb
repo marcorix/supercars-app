@@ -1,79 +1,53 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <h1><em> VINTAGE CARS </em></h1>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <% if user_signed_in? %>
-        <li class="nav-item active">
-          <%= link_to "Home", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item">
-          <%= link_to "Messages", "#", class: "nav-link" %>
-        </li>
-        <li class="nav-item dropdown">
-          <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
-          <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-            <%= link_to "Action", "#", class: "dropdown-item" %>
-            <%= link_to "Another action", "#", class: "dropdown-item" %>
-            <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
-          </div>
-        </li>
-      <% else %>
-        <li class="nav-item">
-          <%= link_to "List Car", "#", class: "nav-link" %>
-          <%= link_to "Login", new_user_session_path, class: "nav-link" %>
-        </li>
-      <% end %>
-    </ul>
-  </div>
-</div>
 <div class="banner">
   <div class="container">
     <h1>Vintage Cars brings <strong>beautiful classics</strong> to <strong>nostalgic people</strong>!</h1>
     <p>A once in a lifetime experience in your hands</p>
-    <a class="btn btn-gradient" href="#">View available cars</a>
+    <%= link_to 'View available cars', cars_path, class: "btn btn-gradient" %>
   </div>
 </div>
-
-POPULAR CARS
-<div class="card-trip">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-  <div class="card-trip-infos">
-    <div>
-      <h2>Audi 100 Coupe-S</h2>
-      <p>Beautiful, elegant and stylish car</p>
+<br>
+<div class="card-grid">
+  <div class="card-trip">
+    <img src="https://www.instant-quote.co/images/cars/large/o_1c80gnqmfrl51tc811c06ce11sh1h.jpg" />
+    <div class="card-trip-infos">
+      <div>
+        <a href="/cars/1">Jaguar E-Type</a>
+        <p>Beautiful, elegant and stylish car</p>
+      </div>
+      <h2 class="card-trip-pricing">£300/hr</h2>
+      <img src="https://avatars.githubusercontent.com/u/90570222?v=4" class="card-trip-user avatar-bordered" />
     </div>
-    <h2 class="card-trip-pricing">£300/hr</h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
   </div>
-</div>
-
-<div class="card-trip">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-  <div class="card-trip-infos">
-    <div>
-      <h2>Audi 100 Coupe-S</h2>
-      <p>Beautiful, elegant and stylish car</p>
+  <div class="card-trip">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Audi_100_Coupe_BW_1.JPG" />
+    <div class="card-trip-infos">
+      <div>
+        <a href="/cars/2">Audi 100 Coupe-S</a>
+        <p>Beautiful, elegant and stylish car</p>
+      </div>
+      <h2 class="card-trip-pricing">£250/hr</h2>
+      <img src="https://avatars.githubusercontent.com/u/65777698?v=4" class="card-trip-user avatar-bordered" />
     </div>
-    <h2 class="card-trip-pricing">£300/hr</h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
   </div>
-</div>
 
-<div class="card-trip">
-  <img src="https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/greece.jpg" />
-  <div class="card-trip-infos">
-    <div>
-      <h2>Audi 100 Coupe-S</h2>
-      <p>Beautiful, elegant and stylish car</p>
+  <div class="card-trip">
+    <img src="https://cdn.classic-trader.com/I/images/1920_1920_inset/vehicle_ad_standard_image_ddac7bef77c910a143c3d56d5976c68c.jpg"/>
+    <div class="card-trip-infos">
+      <div>
+        <a href="/cars/3">Ferrari 330 GT 2+2</a>
+        <p>Beautiful, elegant and stylish car</p>
+      </div>
+      <h2 class="card-trip-pricing">£320/hr</h2>
+      <img src="https://avatars.githubusercontent.com/u/91191121?v=4" class="card-trip-user avatar-bordered" />
     </div>
-    <h2 class="card-trip-pricing">£300/hr</h2>
-    <img src="https://kitt.lewagon.com/placeholder/users/krokrob" class="card-trip-user avatar-bordered" />
   </div>
 </div>
-<%= link_to 'View Cars', cars_path %>
+<div class="footer">
+  <div class="footer-links">
+    <a> Contact us </a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+</div>
