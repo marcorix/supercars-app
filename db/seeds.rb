@@ -1,5 +1,9 @@
+puts 'Cleaning db...'
+
+Car.destroy_all
 
 puts 'Creating 10 cars...'
+
 
 user = User.create(email: "newuser@hotmail.com", password: "plsletmein")
 
