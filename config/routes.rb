@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: 'pages#home'
   get '/dashboard', to: 'pages#dashboard'
   resources :cars do
-    resources :bookings, only: [ :create ]
+    resources :bookings, only: [ :create, :show]
+    end
   end
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
-end
