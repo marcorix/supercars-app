@@ -1,17 +1,37 @@
-<h1>Cars List</h1>
+<h1 class="nameofpage">Cars List</h1>
 
 
 
-<%= link_to 'Add a Car', new_car_path %>
-<div class="container">
-    <div class="cards">
-      <% @cars.each do |car| %>
-        <%= cl_image_tag car.photo.key, height: 300, width: 400, crop: :fill %>
+<div>
+<%= link_to "Filter - Model, Year, Price", "#", class: "btn btn-ghost" %>
+<%= link_to 'Add a car', new_car_path, class: "btn btn-flat" %>
+</div>
+<div>
+<div class="cars-container">
+  <% @cars.each do |car| %>
+    <div class="card-trip">
+      <%= image_tag("#{car.image_url}") %>
+      <div class="details-container">
+      <div class="cars-info">
         <%= car.model %> |
-        <%= car.year %>
-        <h4>£ <%= car.price %> p/day</h4> |
-        <%= link_to 'View details', car_path(car) %>
+        <%= car.year %> |
+      </div>
+        <h4>£ <%= car.price %> p/day</h4>
+        <%= link_to 'View details', car_path(car), class: "d-flex justify-content-end" %>
         <hr>
-      <% end %>
     </div>
+    </div>
+  <% end %>
+</div>
+</div>
+<br>
+<br>
+<div class="footer">
+  <div class="footer-links">
+    <a> Contact us </a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
 </div>
