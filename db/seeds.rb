@@ -1,5 +1,6 @@
 puts 'Cleaning db...'
 
+Booking.destroy_all
 Car.destroy_all
 User.destroy_all
 puts 'Creating 10 cars...'
