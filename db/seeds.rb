@@ -42,5 +42,20 @@ file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/1961_
 car = Car.create(model: "Bentley S2", color: "Grey", image_url: "", year: 1961, price: 195, user: user, location: "Bristol, #{Faker::Address.street_address}")
 car.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
+file = URI.open("https://www.sportscarmarket.com/wp-content/uploads/2016/12/1961-maserati-3500-gt-vignale-spyder-front.jpg")
+car = Car.create(model: "Maserati 3500 GT Vignale Spyder", color: "Blue", image_url: "", year: 1961, price: 230, user: user)
+car.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
+file = URI.open("https://cdn.shopify.com/s/files/1/0014/7472/3917/articles/mercedes-benz-gullwing-coupe-auction-0-1_1200x800_crop_center.jpg?v=1533831193")
+car = Car.create(model: "Mercedes-Benz 300SL Gullwing Coupe", color: "Black", image_url: "", year: 1955, price: 255, user: user)
+car.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
+file = URI.open("https://car-from-uk.com/ebay/carphotos/full/ebay456846.jpg")
+car = Car.create(model: "Cadillac Coupe Deville", color: "Pink", image_url: "", year: 1960, price: 160, user: user)
+car.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
+file = URI.open("https://cdn.publish0x.com/prod/fs/images/03a61eb89d5fb217d8bd22de9c306a23fef7cc52c00626c54e0f936db2b8d4cc.jpeg")
+car = Car.create(model: "BMW 507", color: "Blue", image_url: "", year: 1956, price: 206, user: user)
+car.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
 puts '...Finished!'
