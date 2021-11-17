@@ -1,8 +1,19 @@
-<h1>My Dashboard</h1>
+<h2>My Dashboard</h2>
 <h3><%= "You haven't book any cars yet!" if @user.bookings.empty? %></h3>
-<% @user.bookings.each do |booking| %>
-  <h2><%= booking.car.model %></h2>
-  <h4>from: <%= booking.start_date %></h4>
-  <h4>to: <%= booking.end_date %></h4>
-  <hr>
+
+<div class="card-grid">
+ <% @user.bookings.each do |booking| %>
+  <div class="card-trip">
+        <%= cl_image_tag booking.car.photo.key%>
+    <div class="card-trip-infos">
+      <div>
+        <a href="/cars/1"> <%= booking.car.model %></a>
+        <p>from: <%= booking.start_date %></p>
+        <p>to: <%= booking.end_date %></p>
+      </div>
+      <img src="https://avatars.githubusercontent.com/u/90570222?v=4" class="card-trip-user avatar-bordered" />
+    </div>
+  </div>
 <% end %>
+</div>
+<br>
