@@ -10,7 +10,7 @@
 <div class="cars-container">
   <% @cars.each do |car| %>
     <div class="card-trip">
-    <% if car.photo.attatched? %>
+    <% if car.photo.attached? %>
       <%= cl_image_tag car.photo.key%>
     <% else %>
      <img src="https://www.instant-quote.co/images/cars/large/o_1c80gnqmfrl51tc811c06ce11sh1h.jpg" />
