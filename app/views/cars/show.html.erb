@@ -1,3 +1,4 @@
+<%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %>
 <h1>Model: <%= @car.model %></h1>
 <h2>Color: <%= @car.color %></h2>
 <h4>Year: <%= @car.year %></h4>
@@ -8,5 +9,6 @@
   <%= f.input :start_date, as: :date, html5: true%>
   <%= f.input :end_date, as: :date, html5: true%>
   <%= f.submit %>
+
 <% end %>
 <%= link_to 'Back to the list', cars_path %>
