@@ -1,14 +1,23 @@
-<%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %>
-<h1>Model: <%= @car.model %></h1>
-<h2>Color: <%= @car.color %></h2>
-<h4>Year: <%= @car.year %></h4>
-<h4>Price: £<%= @car.price %> per day </h4>
-<h4>Owner: <%= @car.user.email %></h4>
+<div class="container">
+  <div class="row justify-content-center">
+    <div class="col-6">
+    <br>
+    <%= cl_image_tag @car.photo.key, height: 300, width: 545, crop: :fill %>
+    <hr>
+    <br>
+    <h2>Model: <%= @car.model %></h2>
+    <h4>Color: <%= @car.color %></h4>
+    <h4>Year: <%= @car.year %></h4>
+    <h4>Price: £<%= @car.price %> /day </h4>
+    <h4>Location: <%= @car.location %></h4>
+    <h4>Owner Contact: <%= @car.user.email %></h4>
+  <hr>
+    <%= simple_form_for([@car, @booking]) do |f| %>
+      <%= f.input :start_date, as: :date, html5: true%>
+      <%= f.input :end_date, as: :date, html5: true%>
+      <%= f.submit %>
+    <% end %>
 
-<%= simple_form_for([@car, @booking]) do |f| %>
-  <%= f.input :start_date, as: :date, html5: true%>
-  <%= f.input :end_date, as: :date, html5: true%>
-  <%= f.submit %>
-
-<% end %>
-<%= link_to 'Back to the list', cars_path %>
+    </div>
+  </div>
+</div>
