@@ -23,15 +23,23 @@ user = User.create(email: "newuser@hotmail.com", password: "plsletmein")
 require "open-uri"
 
 file = URI.open("https://www.instant-quote.co/images/cars/large/o_1c80gnqmfrl51tc811c06ce11sh1h.jpg")
-car = Car.create(model: "Jaguar E-Type", color: "Red", year: 1962, price: 200, user: user)
+car = Car.create(model: "Jaguar E-Type", color: "Red", year: 1962, price: 200, user: user, location: "London, #{Faker::Address.street_address}")
 car.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
 file = URI.open("https://upload.wikimedia.org/wikipedia/commons/c/c2/Audi_100_Coupe_BW_1.JPG")
-car = Car.create(model: "Audi 100 Coupé S", color: "Blue", image_url: "", year: 1969, price: 180, user: user)
+car = Car.create(model: "Audi 100 Coupé S", color: "Blue", image_url: "", year: 1969, price: 180, user: user, location: "London, #{Faker::Address.street_address}")
 car.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
 file = URI.open("https://cdn.classic-trader.com/I/images/1920_1920_inset/vehicle_ad_standard_image_ddac7bef77c910a143c3d56d5976c68c.jpg")
-car = Car.create(model: "Ferrari 330 GT 2+2", color: "Blue", image_url: "", year: 1966, price: 366, user: user)
+car = Car.create(model: "Ferrari 330 GT 2+2", color: "Blue", image_url: "", year: 1966, price: 366, user: user, location: "Liverpool, #{Faker::Address.street_address}")
+car.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
+file = URI.open("https://www.classicdriver.com/sites/default/files/styles/colorbox/public/article_images/03_34.jpg")
+car = Car.create(model: "Porsche 964 Turbo", color: "White", image_url: "", year: 1992, price: 210, user: user, location: "London, #{Faker::Address.street_address}")
+car.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
+
+file = URI.open("https://upload.wikimedia.org/wikipedia/commons/thumb/d/d6/1961_Bentley_S2_6.2.jpg/2560px-1961_Bentley_S2_6.2.jpg")
+car = Car.create(model: "Bentley S2", color: "Grey", image_url: "", year: 1961, price: 195, user: user, location: "Bristol, #{Faker::Address.street_address}")
 car.photo.attach(io: file, filename: 'nes.jpg', content_type: 'image/jpg')
 
 
