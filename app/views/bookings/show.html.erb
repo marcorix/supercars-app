@@ -9,7 +9,7 @@
 
 <div class="card-grid">
   <div class="card-trip">
-    <img src="https://www.instant-quote.co/images/cars/large/o_1c80gnqmfrl51tc811c06ce11sh1h.jpg" />
+    <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %>
     <div class="card-trip-infos">
       <div>
         <a href="/cars/1"> <%= @car.model %></a>
