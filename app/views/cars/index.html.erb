@@ -10,13 +10,14 @@
 <div class="cars-container">
   <% @cars.each do |car| %>
     <div class="card-trip">
-      <%= image_tag("#{car.image_url}") %>
+      <%= cl_image_tag car.photo.key%>
       <div class="details-container">
       <div class="cars-info">
         <%= car.model %> |
         <%= car.year %> |
+        <%= car.location %>
       </div>
-        <h4>£ <%= car.price %> p/day</h4>
+        <h4>£ <%= car.price %> /day</h4>
         <%= link_to 'View details', car_path(car), class: "d-flex justify-content-end" %>
         <hr>
     </div>
