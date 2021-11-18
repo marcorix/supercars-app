@@ -9,7 +9,7 @@
     <h4>Color: <%= @car.color %></h4>
     <h4>Year: <%= @car.year %></h4>
     <h4>Price: £<%= @car.price %> /day </h4>
-    <h4>Location: <%= @car.location %></h4>
+    <h4>Address: <%= @car.address %></h4>
     <h4>Owner Contact: <%= @car.user.email %></h4>
   <hr>
     <%= simple_form_for([@car, @booking]) do |f| %>

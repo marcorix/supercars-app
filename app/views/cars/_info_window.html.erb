@@ -1,0 +1,6 @@
+<%= cl_image_tag car.photo.key, height: 100, width: 200, crop: :fill %>
+<hr>
+<h6><%= car.model %></h6>
+<p><%= car.address %></p>
+<h5>£<%= car.price %>p/day</h5>
+<%= link_to 'View details', car_path(car)%>
