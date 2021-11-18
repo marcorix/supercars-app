@@ -7,7 +7,7 @@
         <%= cl_image_tag booking.car.photo.key%>
     <div class="card-trip-infos">
       <div>
-        <a href="/cars/1"> <%= booking.car.model %></a>
+        <%= link_to booking.car.model, car_path(booking.car) %>
         <p>from: <%= booking.start_date %></p>
         <p>to: <%= booking.end_date %></p>
       </div>
