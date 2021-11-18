@@ -1,7 +1,10 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
-  <div class="name">
-    <h1><em> VINTAGE CARS </em></h1>
+  <%= link_to root_path class:"nav" do %>
+      <div class="logo">
+    <h1> VINTAGE CARS </h1>
+    <img src="https://www.nicepng.com/png/full/782-7822595_classic-car.png">
   </div>
+  <% end %>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -11,9 +14,6 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
-        <li class="nav-item">
-          <%= link_to "Home", root_path, class: "nav-link" %>
-        </li>
         <li class="nav-item">
           <%= link_to "Cars List", cars_path, class: "nav-link" %>
         </li>
