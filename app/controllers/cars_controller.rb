@@ -1,11 +1,26 @@
 class CarsController < ApplicationController
   skip_before_action :authenticate_user!, only: :index
   before_action :set_car, only: [:show]
+
   def index
     if params[:query].present?
       @cars = Car.search_by_model_and_year__and_color_and_location(params[:query])
     else
       @cars = Car.all
+    end
+  end
+
+  def map
+    @cars = Car.all
+
+    # the `geocoded` scope filters only flats with coordinates (latitude & longitude)
+    @markers = @cars.geocoded.map do |car|
+      {
+        lat: car.latitude,
+        lng: car.longitude,
+        info_window: render_to_string(partial: "info_window", locals: { car: car }),
+        image_url: helpers.asset_url("car_icon.png")
+      }
     end
   end
 
