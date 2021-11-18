@@ -1,9 +1,13 @@
-<h1>Add a New Car</h1>
+<h1 class="titlefont">Add a New Car</h1>
 <hr>
-<%= simple_form_for(@car) do |f| %>
-  <%= f.input :model %>
-  <%= f.input :color %>
-  <%= f.input :year %>
-  <%= f.input :price %>
-  <%= f.submit class: "btn-flat btn-flat:hover" %>
-<% end %>
+<div class="form-container">
+  <%= simple_form_for(@car) do |f| %>
+    <%= f.input :model, placeholder: "Ferrari..." %>
+    <%= f.input :color, placeholder: "Red..." %>
+    <%= f.input :year, placeholder: "YYYY"%>
+    <%= f.input :price, placeholder: "£££"  %>
+    <%= f.input :address, placeholder: "London..." %>
+    <%= f.input :photo, input_html: { class: "hidden" } %>
+    <%= f.submit class: "btn-new-flat btn-new-flat:hover", value: "Add Car" %>
+  <% end %>
+</div>
