@@ -33,15 +33,23 @@ a:not([href]):not([class]) {
 }
 
 .btn-ghost {
-  color: #167FFB;
-  border: 1px solid #045868;
+  color: #045868;
   padding: 8px 24px;
-  border-radius: 50px;
-  font-weight: lighter;
-  opacity: 0.6;
-  transition: opacity 0.3s ease;
+  border-radius: 4px;
+  border-color: #045868;
   margin-bottom: 30px;
-  margin-left: 10px
+  margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
 
 .btn-ghost:hover {
@@ -112,13 +120,27 @@ h4 {
   color: white;
   padding: 8px 24px;
   border-radius: 4px;
+  box-shadow: none;
+  border-color: #045868;
   background: #045868;
-  transition: background 0.3s ease;
   margin-bottom: 30px;
   margin-left: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
 }
 
 .btn-flat:hover {
-  background: #1BCB7F;
+  background:linear-gradient(#046578, #06657f);
   color: white;
+  -webkit-transform: translateY(-3px);
+  transform: translateY(-3px);
 }
