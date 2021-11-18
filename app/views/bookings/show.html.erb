@@ -12,7 +12,7 @@
     <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %>
     <div class="card-trip-infos">
       <div>
-        <a href="/cars/1"> <%= @car.model %></a>
+        <%= link_to @car.model, car_path(@car) %>
         <p>from: <%= @booking.start_date %></p>
         <p>to: <%= @booking.end_date %></p>
       </div>
