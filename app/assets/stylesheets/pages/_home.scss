@@ -3,6 +3,7 @@
   background-size: cover;
   background-position: center;
   padding: 150px 0;
+  width: 100vw;
 }
 
 .banner h1 {
@@ -69,6 +70,14 @@
   width: 100%;
   object-fit: cover;
 }
+
+
+.card-trip-img {
+  height: 200px;
+  object-fit: cover;
+}
+
+
 
 .card-trip h5 {
   font-size: 16px;
