@@ -1,39 +1,40 @@
-<h1 class="nameofpage">Cars List</h1>
 
-<div>
-  <%= form_tag cars_path, method: :get, class: 'form-inline' do %>
-    <%= text_field_tag :query,
-        params[:query],
-        class: "form-control",
-        placeholder: "Find a vintage car"
-      %>
-      <%= submit_tag "Search", class: "btn btn-ghost" %>
-    <% end %>
-<%= link_to 'Add a car', new_car_path, class: "btn btn-flat" %>
-</div>
-<div>
-<div class="cars-container">
-  <% @cars.each do |car| %>
-    <div class="card-trip">
-    <% if car.photo.attached? %>
-      <%= cl_image_tag car.photo.key%>
-    <% else %>
-     <img src="https://www.instant-quote.co/images/cars/large/o_1c80gnqmfrl51tc811c06ce11sh1h.jpg" />
-    <% end %>
+<div class="container">
+  <div>
+    <br>
+      <%= form_tag cars_path, method: :get, class: 'form-inline' do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control flex-grow-1",
+          placeholder: "Find a vintage car"
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
+  </div>
+  <br>
 
-      <div class="details-container">
-      <div class="cars-info">
-        <%= car.model %> |
-        <%= car.year %> |
-        <%= car.address %>
+  <div class="cars-container">
+    <% @cars.each do |car| %>
+      <div class="card-trip">
+        <% if car.photo.attached? %>
+          <%= cl_image_tag car.photo.key%>
+        <% else %>
+        <img src="https://www.instant-quote.co/images/cars/large/o_1c80gnqmfrl51tc811c06ce11sh1h.jpg" />
+        <% end %>
+
+        <div class="details-container">
+          <div class="cars-info">
+           <%= car.model %> |
+            <%= car.year %> |
+            <%= car.address %>
+          </div>
+          <h4>£ <%= car.price %> /day</h4>
+          <%= link_to 'View details', car_path(car), class: "btn btn-primary" %>
+          <hr>
+        </div>
       </div>
-        <h4>£ <%= car.price %> /day</h4>
-        <%= link_to 'View details', car_path(car), class: "d-flex justify-content-end" %>
-        <hr>
-    </div>
-    </div>
-  <% end %>
-</div>
+    <% end %>
+  </div>
 </div>
 <br>
 <br>

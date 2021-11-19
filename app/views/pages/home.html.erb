@@ -1,45 +1,49 @@
 <div class="banner">
   <div class="container">
     <h1>Vintage Cars brings <strong>beautiful classics</strong> to <strong>nostalgic people</strong>!</h1>
-    <p> <strong>Hire</strong> a once in a lifetime experience</p>
-    <%= link_to 'View available cars', cars_path, class: "btn btn-gradient" %>
+    <p>A once in a lifetime experience in your hands</p>
+    <%= link_to 'View available cars', cars_path, class: "btn btn-flat" %>
+    <%= link_to 'Add a car', new_car_path, class: "btn btn-flat" %>
   </div>
 </div>
 <br>
-<h2>Popular Options</h2>
-<div class="card-grid">
-  <div class="card-trip">
-    <img src="https://www.instant-quote.co/images/cars/large/o_1c80gnqmfrl51tc811c06ce11sh1h.jpg" />
-    <div class="card-trip-infos">
-      <div>
-        <a href="/cars/1">Jaguar E-Type</a>
-        <p>Beautiful, elegant and stylish car</p>
+<div class="container">
+<h2>Most Popular</h2>
+<br>
+  <div class="card-grid">
+    <div class="card-trip">
+      <img src="https://www.instant-quote.co/images/cars/large/o_1c80gnqmfrl51tc811c06ce11sh1h.jpg" />
+      <div class="card-trip-infos">
+        <div>
+          <a href="/cars/1">Jaguar E-Type</a>
+          <p>Beautiful, elegant and stylish car</p>
+        </div>
+        <h2 class="card-trip-pricing">£300/hr</h2>
+        <img src="https://avatars.githubusercontent.com/u/90570222?v=4" class="card-trip-user avatar-bordered" />
       </div>
-      <h2 class="card-trip-pricing">£300/hr</h2>
-      <img src="https://avatars.githubusercontent.com/u/90570222?v=4" class="card-trip-user avatar-bordered" />
     </div>
-  </div>
-  <div class="card-trip">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Audi_100_Coupe_BW_1.JPG" />
-    <div class="card-trip-infos">
-      <div>
-        <a href="/cars/2">Audi 100 Coupe-S</a>
-        <p>Beautiful, elegant and stylish car</p>
+    <div class="card-trip">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Audi_100_Coupe_BW_1.JPG" />
+      <div class="card-trip-infos">
+        <div>
+          <a href="/cars/2">Audi 100 Coupe-S</a>
+          <p>Beautiful, elegant and stylish car</p>
+        </div>
+        <h2 class="card-trip-pricing">£250/hr</h2>
+        <img src="https://avatars.githubusercontent.com/u/65777698?v=4" class="card-trip-user avatar-bordered" />
       </div>
-      <h2 class="card-trip-pricing">£250/hr</h2>
-      <img src="https://avatars.githubusercontent.com/u/65777698?v=4" class="card-trip-user avatar-bordered" />
     </div>
-  </div>
 
-  <div class="card-trip">
-    <img src="https://cdn.classic-trader.com/I/images/1920_1920_inset/vehicle_ad_standard_image_ddac7bef77c910a143c3d56d5976c68c.jpg"/>
-    <div class="card-trip-infos">
-      <div>
-        <a href="/cars/3">Ferrari 330 GT 2+2</a>
-        <p>Beautiful, elegant and stylish car</p>
+    <div class="card-trip">
+      <img src="https://cdn.classic-trader.com/I/images/1920_1920_inset/vehicle_ad_standard_image_ddac7bef77c910a143c3d56d5976c68c.jpg"/>
+      <div class="card-trip-infos">
+        <div>
+          <a href="/cars/3">Ferrari 330 GT 2+2</a>
+          <p>Beautiful, elegant and stylish car</p>
+        </div>
+        <h2 class="card-trip-pricing">£320/hr</h2>
+        <img src="https://avatars.githubusercontent.com/u/91191121?v=4" class="card-trip-user avatar-bordered" />
       </div>
-      <h2 class="card-trip-pricing">£320/hr</h2>
-      <img src="https://avatars.githubusercontent.com/u/91191121?v=4" class="card-trip-user avatar-bordered" />
     </div>
   </div>
 </div>
