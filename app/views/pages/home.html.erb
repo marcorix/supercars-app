@@ -11,31 +11,33 @@
 <h2>Most Popular</h2>
 <br>
   <div class="card-grid">
-    <div class="card-trip">
-      <img src="https://www.instant-quote.co/images/cars/large/o_1c80gnqmfrl51tc811c06ce11sh1h.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <a href="/cars/1">Jaguar E-Type</a>
-          <p>Beautiful, elegant and stylish car</p>
-        </div>
-        <h2 class="card-trip-pricing">£300/hr</h2>
-        <img src="https://avatars.githubusercontent.com/u/90570222?v=4" class="card-trip-user avatar-bordered" />
-      </div>
+  <div class="card-trip">
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+  <ol class="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <%= image_tag "image1", class:"d-block w-100 card-trip-img", alt:"First slide"%>
     </div>
-    <div class="card-trip">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/c/c2/Audi_100_Coupe_BW_1.JPG" />
-      <div class="card-trip-infos">
-        <div>
-          <a href="/cars/2">Audi 100 Coupe-S</a>
-          <p>Beautiful, elegant and stylish car</p>
-        </div>
-        <h2 class="card-trip-pricing">£250/hr</h2>
-        <img src="https://avatars.githubusercontent.com/u/65777698?v=4" class="card-trip-user avatar-bordered" />
-      </div>
+    <div class="carousel-item">
+      <%= image_tag "image0",  class:"d-block w-100 card-trip-img", alt:"Second slide"%>
     </div>
-
-    <div class="card-trip">
-      <img src="https://cdn.classic-trader.com/I/images/1920_1920_inset/vehicle_ad_standard_image_ddac7bef77c910a143c3d56d5976c68c.jpg"/>
+    <div class="carousel-item">
+      <%= image_tag "image2", class:"d-block w-100 card-trip-img", alt:"Third slide"%>
+    </div>
+  </div>
+  <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
       <div class="card-trip-infos">
         <div>
           <a href="/cars/3">Ferrari 330 GT 2+2</a>
@@ -45,5 +47,25 @@
         <img src="https://avatars.githubusercontent.com/u/91191121?v=4" class="card-trip-user avatar-bordered" />
       </div>
     </div>
+
+   <% @cars.last(2).each do |car| %>
+    <div class="card-trip">
+       <% if car.photo.attached? %>
+          <%= cl_image_tag car.photo.key%>
+        <% else %>
+        <img src="https://www.instant-quote.co/images/cars/large/o_1c80gnqmfrl51tc811c06ce11sh1h.jpg" />
+        <% end %>
+      <div class="card-trip-infos">
+        <div>
+          <%= link_to car.model, car_path(car) %>
+          <p>Beautiful, elegant and stylish car</p>
+        </div>
+        <h2 class="card-trip-pricing"> £ <%= car.price %> /day</h2>
+        <img src="https://avatars.githubusercontent.com/u/90570222?v=4" class="card-trip-user avatar-bordered" />
+      </div>
+    </div>
+    <% end %>
+
+
   </div>
 </div>
