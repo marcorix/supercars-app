@@ -76,7 +76,10 @@ a:not([href]):not([class]) {
   width: 100%;
   object-fit: cover;
 }
-
+#map-pin {
+  height: 25px;
+  width: 25px;
+}
 .card-trip h2 {
   font-size: 16px;
   font-weight: bold;
