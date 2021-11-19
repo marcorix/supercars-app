@@ -1,6 +1,9 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: #045868;
+  position: sticky;
+  top: 0;
+  z-index: 4;
 }
 
 .navbar a:hover {
