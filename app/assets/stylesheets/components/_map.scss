@@ -14,3 +14,11 @@
 .mapboxgl-popup-content img {
   border-radius: 5px;
 }
+
+#button-map-details {
+  height: 40px;
+  width: 130px;
+}
+#button-map-details:hover {
+  opacity: 0.9;
+}
