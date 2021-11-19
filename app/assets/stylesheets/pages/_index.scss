@@ -1,6 +1,7 @@
 // Import page-specific CSS files here.
 @import "home";
 @import "new";
+@import "show";
 
 .footer {
   background: #045868;
@@ -129,7 +130,6 @@ h4 {
   border-color: #045868;
   background: #045868;
   margin-bottom: 30px;
-  margin-left: 10px;
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
