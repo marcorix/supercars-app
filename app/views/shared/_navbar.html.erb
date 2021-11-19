@@ -1,8 +1,8 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to root_path class:"nav" do %>
       <div class="logo">
-    <h1> VINTAGE CARS </h1>
     <img src="https://www.nicepng.com/png/full/782-7822595_classic-car.png">
+    <h1> VINTAGE CARS </h1>
   </div>
   <% end %>
 
@@ -15,10 +15,10 @@
     <ul class="navbar-nav mr-auto">
       <% if user_signed_in? %>
         <li class="nav-item">
-          <%= link_to "Cars List", cars_path, class: "nav-link" %>
+          <%= link_to "All Cars", cars_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
-          <%= link_to "My Dashboard", dashboard_path, class: "nav-link" %>
+          <%= link_to "My Bookings", dashboard_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <%= image_tag "https://media-exp1.licdn.com/dms/image/C4D03AQHZ3tbDWDaEoA/profile-displayphoto-shrink_800_800/0/1528295557079?e=1642636800&v=beta&t=lVYb6MccloV8hoEIP1Tr6BQWQ9E1o0JL2DgXZ5dprlU", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
