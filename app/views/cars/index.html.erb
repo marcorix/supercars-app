@@ -24,12 +24,17 @@
 
         <div class="details-container">
           <div class="cars-info">
-           <%= car.model %> |
-            <%= car.year %> |
-            <%= car.address %>
+           <h2><%= car.model %></h2>
+            <h2> Year: <%= car.year %></h2>
           </div>
-          <h4>£ <%= car.price %> /day</h4>
-          <%= link_to 'View details', car_path(car), class: "btn btn-primary" %>
+            <div>
+              <img src="https://w7.pngwing.com/pngs/652/32/png-transparent-google-maps-pin-bing-maps-mapquest-map-map-location-red.png" alt="" id="map-pin">
+              <%= car.address %>
+            </div>
+            <div class="cars-info">
+              <h4>£ <%= car.price %> /day</h4>
+              <%= link_to 'View details', car_path(car), class: "btn btn-primary" %>
+            </div>
           <hr>
         </div>
       </div>
