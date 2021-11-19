@@ -12,13 +12,15 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   font-size: 32px;
   font-weight: bold;
+  text-align: left;
 }
 
 .banner p {
   font-size: 20px;
   color: white;
-  opacity: .7;
+  opacity: .9;
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+  text-align: left;
 }
 .btn-gradient {
   color: white;
@@ -69,16 +71,25 @@
   object-fit: cover;
 }
 
+
 .card-trip-img {
   height: 200px;
   object-fit: cover;
 }
 
-.card-trip h2 {
+
+
+.card-trip h5 {
   font-size: 16px;
   font-weight: bold;
   margin: 0;
 }
+
+.h5 {
+  font-size: 12px;
+  margin: 0;
+}
+
 
 .card-trip p {
   font-size: 12px;

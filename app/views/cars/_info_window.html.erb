@@ -5,5 +5,5 @@
 <p><%= car.address %></p>
 
 </div>
-<h5>£<%= car.price %>p/day</h5>
-<%= link_to 'View details', car_path(car)%>
+<h5>£<%= car.price %> p/day</h5>
+<p><%= link_to 'View details', car_path(car), class: "btn btn-primary", id: "button-map-details"%></p>
