@@ -71,6 +71,20 @@ a:not([href]):not([class]) {
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
+ .card-trip-booking {
+  overflow: hidden;
+  background: white;
+  margin-left: 260px;
+  margin-right: 100px;
+  margin-top: 60px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+ }
+.card-trip-booking > img {
+  height: 160px;
+  width: 100%;
+  object-fit: cover;
+}
+
 .card-trip > img {
   height: 200px;
   width: 100%;
@@ -188,4 +202,32 @@ h4 {
   color: white;
   -webkit-transform: translateY(-3px);
   transform: translateY(-3px);
+}
+
+
+.container-left, .container-right
+{
+  margin: 1em 0;
+  display: flex;
+	align-items: center;
+  flex-shrink: 0;
+}
+
+.container-left
+{
+  margin-right: 380px;
+  float: left;
+}
+
+.container-right
+{
+  margin-left: auto;
+  float: right;
+}
+.container-left::after,
+.container-right::after
+{
+  content: "";
+  display: block;
+  clear: both;
 }
