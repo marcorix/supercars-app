@@ -5,18 +5,18 @@
   </div>
 </div>
 <br>
-<h1 class="nameofpage">Enjoy your ride with your <%= @car.model %></h1>
+<h1 class="nameofpage">Enjoy your ride with your <%= @booking.car.model %></h1>
 
 <div class="card-grid">
   <div class="card-trip">
-    <%= cl_image_tag @car.photo.key, height: 300, width: 400, crop: :fill %>
+    <%= cl_image_tag @booking.car.photo.key, height: 300, width: 400, crop: :fill %>
     <div class="card-trip-infos">
       <div>
-        <%= link_to @car.model, car_path(@car) %>
+        <%= link_to @booking.car.model, car_path(@booking.car) %>
         <p>from: <%= @booking.start_date %></p>
         <p>to: <%= @booking.end_date %></p>
       </div>
-      <h2 class="card-trip-pricing">£ <%= @car.price %> p/day</h2>
+      <h2 class="card-trip-pricing">£ <%= @booking.car.price %> p/day</h2>
       <img src="https://avatars.githubusercontent.com/u/90570222?v=4" class="card-trip-user avatar-bordered" />
     </div>
   </div>
