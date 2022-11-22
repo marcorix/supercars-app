@@ -25,11 +25,11 @@ class CarsController < ApplicationController
   end
 
   def show
-    @booking = Booking.new()
+    @booking = Booking.new
   end
 
   def new
-    @car = Car.new()
+    @car = Car.new
   end
 
   def create

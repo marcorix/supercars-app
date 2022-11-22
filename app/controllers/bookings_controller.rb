@@ -17,6 +17,17 @@ class BookingsController < ApplicationController
     end
   end
 
+  def edit
+    @car = Car.find(params[:car_id])
+    @booking = Booking.find(params[:id])
+  end
+
+  def update
+    @booking = Booking.find(params[:id])
+    @booking.update(bookings_params)
+    redirect_to booking_path(@booking)
+  end
+
   private
 
   # Only allow a list of trusted parameters through.

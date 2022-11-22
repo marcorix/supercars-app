@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get 'dashboard', to: 'pages#dashboard'
   # get 'cars/map', to: 'cars#map'
   resources :cars do
-    resources :bookings, only: [ :create]
+    resources :bookings, only: [ :create, :edit, :update]
     collection do
       get :map
     end

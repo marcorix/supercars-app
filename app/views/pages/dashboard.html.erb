@@ -12,6 +12,7 @@
           <%= link_to booking.car.model, car_path(booking.car) %>
           <p>from: <%= booking.start_date %></p>
           <p>to: <%= booking.end_date %></p>
+          <p><%= link_to 'Edit', edit_car_booking_path(booking.car, booking) %></p>
         </div>
         <img src="https://avatars.githubusercontent.com/u/90570222?v=4" class="card-trip-user avatar-bordered" />
       </div>
